@@ -1,4 +1,4 @@
-library font_awesome_flutter;
+library font_awesome_flutter_map;
 
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/icon_data.dart';
@@ -7,7 +7,7 @@ import 'package:font_awesome_flutter/icon_data.dart';
 
 class FontAwesomeFontMap {
   static FontAwesomeFontMap _instance;
-  Map _map;
+  Map _map = Map();
 
   factory FontAwesomeFontMap() {
     if (_instance == null) {

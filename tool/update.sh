@@ -18,3 +18,4 @@ dartfmt -w ./lib/font_awesome_flutter_map.dart
 dartfmt -w ./example/lib/icons.dart
 
 rm tmp/icons.json
+flutter test
