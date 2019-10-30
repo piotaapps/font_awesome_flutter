@@ -8,11 +8,13 @@ curl -O -L "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/we
 
 popd
 
-curl -o /tmp/icons.json "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/metadata/icons.json"
+curl -o tmp/icons.json "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/metadata/icons.json"
 
-dart ./tool/generate_font.dart /tmp/icons.json
-dart ./tool/generate_example.dart /tmp/icons.json
+dart ./tool/generate_font.dart tmp/icons.json
+dart ./tool/generate_example.dart tmp/icons.json
+dart ./tool/generate_font_map.dart tmp/icons.json
 dartfmt -w ./lib/font_awesome_flutter.dart
+dartfmt -w ./lib/font_awesome_flutter_map.dart
 dartfmt -w ./example/lib/icons.dart
 
-rm /tmp/icons.json
+rm tmp/icons.json
